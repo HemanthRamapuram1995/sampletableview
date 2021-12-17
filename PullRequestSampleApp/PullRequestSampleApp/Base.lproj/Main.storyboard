@@ -16,12 +16,56 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="OTg-u1-QjC">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PRITEM" rowHeight="90" id="OTg-u1-QjC" customClass="PRItemCell" customModule="PullRequestSampleApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OTg-u1-QjC" id="B1B-yZ-VQ9">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcM-ji-pOX">
+                                            <rect key="frame" x="16" y="16" width="382" height="58"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PRIcon" translatesAutoresizingMaskIntoConstraints="NO" id="GXU-Bl-a7Q">
+                                                    <rect key="frame" x="5" y="10" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="Dt9-7x-E0i"/>
+                                                        <constraint firstAttribute="width" constant="20" id="ukY-QE-8Ot"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wcp-Zc-TY6" userLabel="title">
+                                                    <rect key="frame" x="45" y="0.0" width="327" height="19.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLz-ks-2gl" userLabel="closed">
+                                                    <rect key="frame" x="45" y="34.5" width="327" height="23.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="jLz-ks-2gl" firstAttribute="top" secondItem="Wcp-Zc-TY6" secondAttribute="bottom" constant="15" id="4Po-eJ-XOZ"/>
+                                                <constraint firstItem="jLz-ks-2gl" firstAttribute="trailing" secondItem="Wcp-Zc-TY6" secondAttribute="trailing" id="6O6-I9-BfT"/>
+                                                <constraint firstAttribute="bottom" secondItem="jLz-ks-2gl" secondAttribute="bottom" id="JIb-Z2-bxz"/>
+                                                <constraint firstItem="GXU-Bl-a7Q" firstAttribute="top" secondItem="YcM-ji-pOX" secondAttribute="top" constant="10" id="M1V-tR-f3x"/>
+                                                <constraint firstAttribute="trailing" secondItem="Wcp-Zc-TY6" secondAttribute="trailing" constant="10" id="PGT-SD-fSi"/>
+                                                <constraint firstItem="GXU-Bl-a7Q" firstAttribute="leading" secondItem="YcM-ji-pOX" secondAttribute="leading" constant="5" id="Tm6-Vt-fSe"/>
+                                                <constraint firstItem="Wcp-Zc-TY6" firstAttribute="leading" secondItem="GXU-Bl-a7Q" secondAttribute="trailing" constant="20" id="ate-tW-qSQ"/>
+                                                <constraint firstItem="jLz-ks-2gl" firstAttribute="leading" secondItem="Wcp-Zc-TY6" secondAttribute="leading" id="fPc-1Y-mm9"/>
+                                                <constraint firstItem="Wcp-Zc-TY6" firstAttribute="top" secondItem="YcM-ji-pOX" secondAttribute="top" id="zUM-CC-od4"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="YcM-ji-pOX" secondAttribute="bottom" constant="16" id="6Sz-es-MAo"/>
+                                        <constraint firstItem="YcM-ji-pOX" firstAttribute="leading" secondItem="B1B-yZ-VQ9" secondAttribute="leading" constant="16" id="YJl-73-RWY"/>
+                                        <constraint firstAttribute="trailing" secondItem="YcM-ji-pOX" secondAttribute="trailing" constant="16" id="ggI-bU-rx2"/>
+                                        <constraint firstItem="YcM-ji-pOX" firstAttribute="top" secondItem="B1B-yZ-VQ9" secondAttribute="top" constant="16" id="z8Y-Jc-6gF"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -56,6 +100,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="PRIcon" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
