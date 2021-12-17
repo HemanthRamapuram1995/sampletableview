@@ -18,6 +18,8 @@ class PullRequestDetailViewController: UIViewController {
     
     var data : PullsList.ResponseModel?
     
+    private let networkManager = NetworkManager()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +40,11 @@ class PullRequestDetailViewController: UIViewController {
         if let createdDate = data.createdDate{
             self.lblCreated.text = "Created at : \(createdDate)"
         }
-        
+        networkManager.fetchImageData(strImageURL: data.strUserImage){[unowned self] avatarImage in
+            DispatchQueue.main.async {
+                self.avatarImgView.image = avatarImage
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
