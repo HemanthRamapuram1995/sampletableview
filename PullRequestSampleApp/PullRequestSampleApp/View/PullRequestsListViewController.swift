@@ -22,6 +22,8 @@ class PullRequestsListViewController: UITableViewController {
     private func fetchData(){
         try? viewmodel.fetchPullRequestsList(.closed)
     }
+    
+    private var arrListPR : [PullsList.ResponseModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +31,7 @@ class PullRequestsListViewController: UITableViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
+         self.clearsSelectionOnViewWillAppear = false
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
@@ -43,18 +44,17 @@ class PullRequestsListViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 5
+        return arrListPR.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PRITEM", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PRITEM", for: indexPath) as! PRItemCell
+        cell.setData(data: arrListPR[indexPath.row])
         return cell
     }
     
@@ -113,7 +113,10 @@ extension PullRequestsListViewController : PullListVMDelegate{
     }
     
     func fetchDataSuccesful(data: [PullsList.ResponseModel]) {
-        
+        self.arrListPR = data
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     func dataUnavailable() {
