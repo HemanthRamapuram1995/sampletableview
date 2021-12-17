@@ -8,15 +8,34 @@
 import UIKit
 
 class PullRequestsListViewController: UITableViewController {
+    
+    private let viewmodel = PullRequestListVM()
+    
+    
+    private func setupVm(){
+        viewmodel.owner = "HemanthRamapuram1995"
+        viewmodel.repository = "sampletableview"
+        viewmodel.delegate = self
+    }
+    
+    
+    private func fetchData(){
+        try? viewmodel.fetchPullRequestsList(.closed)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupVm()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchData()
     }
 
     // MARK: - Table view data source
@@ -86,4 +105,21 @@ class PullRequestsListViewController: UITableViewController {
     }
     */
 
+}
+
+
+extension PullRequestsListViewController : PullListVMDelegate{
+    func fetchDataFailed(reason: String) {
+        
+    }
+    
+    func fetchDataSuccesful(data: [PullsList.ResponseModel]) {
+        
+    }
+    
+    func dataUnavailable() {
+        
+    }
+    
+    
 }

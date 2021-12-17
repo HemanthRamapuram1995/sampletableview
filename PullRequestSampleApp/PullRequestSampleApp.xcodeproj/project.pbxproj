@@ -16,6 +16,8 @@
 		80E68E0A276C96510094A8D1 /* NetworkManagerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E68E09276C96510094A8D1 /* NetworkManagerUtil.swift */; };
 		80E68E0C276C97E80094A8D1 /* PRListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E68E0B276C97E80094A8D1 /* PRListModel.swift */; };
 		80E68E0F276C995E0094A8D1 /* PullRequestsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E68E0E276C995E0094A8D1 /* PullRequestsListViewController.swift */; };
+		80E68E11276C99C40094A8D1 /* PullRequestListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E68E10276C99C40094A8D1 /* PullRequestListVM.swift */; };
+		80E68E17276C9E1C0094A8D1 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E68E16276C9E1C0094A8D1 /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		80E68E09276C96510094A8D1 /* NetworkManagerUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerUtil.swift; sourceTree = "<group>"; };
 		80E68E0B276C97E80094A8D1 /* PRListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRListModel.swift; sourceTree = "<group>"; };
 		80E68E0E276C995E0094A8D1 /* PullRequestsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestsListViewController.swift; sourceTree = "<group>"; };
+		80E68E10276C99C40094A8D1 /* PullRequestListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListVM.swift; sourceTree = "<group>"; };
+		80E68E16276C9E1C0094A8D1 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 		80E68DEC276C94FD0094A8D1 /* PullRequestSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				80E68E15276C9E0D0094A8D1 /* Utility */,
 				80E68E0D276C99440094A8D1 /* View */,
 				80E68E06276C96330094A8D1 /* Network */,
 				80E68DED276C94FD0094A8D1 /* AppDelegate.swift */,
@@ -88,8 +93,17 @@
 			isa = PBXGroup;
 			children = (
 				80E68E0E276C995E0094A8D1 /* PullRequestsListViewController.swift */,
+				80E68E10276C99C40094A8D1 /* PullRequestListVM.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		80E68E15276C9E0D0094A8D1 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				80E68E16276C9E1C0094A8D1 /* Utility.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,7 +179,9 @@
 			files = (
 				80E68E08276C96430094A8D1 /* NetworkManager.swift in Sources */,
 				80E68E0F276C995E0094A8D1 /* PullRequestsListViewController.swift in Sources */,
+				80E68E11276C99C40094A8D1 /* PullRequestListVM.swift in Sources */,
 				80E68E0A276C96510094A8D1 /* NetworkManagerUtil.swift in Sources */,
+				80E68E17276C9E1C0094A8D1 /* Utility.swift in Sources */,
 				80E68DEE276C94FD0094A8D1 /* AppDelegate.swift in Sources */,
 				80E68DF0276C94FD0094A8D1 /* SceneDelegate.swift in Sources */,
 				80E68E0C276C97E80094A8D1 /* PRListModel.swift in Sources */,
