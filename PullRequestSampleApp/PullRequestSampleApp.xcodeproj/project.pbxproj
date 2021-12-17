@@ -13,6 +13,8 @@
 		80E68DF5276C94FD0094A8D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80E68DF3276C94FD0094A8D1 /* Main.storyboard */; };
 		80E68DF7276C94FF0094A8D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80E68DF6276C94FF0094A8D1 /* Assets.xcassets */; };
 		80E68DFA276C94FF0094A8D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80E68DF8276C94FF0094A8D1 /* LaunchScreen.storyboard */; };
+		80E68E08276C96430094A8D1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E68E07276C96430094A8D1 /* NetworkManager.swift */; };
+		80E68E0A276C96510094A8D1 /* NetworkManagerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E68E09276C96510094A8D1 /* NetworkManagerUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		80E68DF6276C94FF0094A8D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80E68DF9276C94FF0094A8D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80E68DFB276C94FF0094A8D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80E68E07276C96430094A8D1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		80E68E09276C96510094A8D1 /* NetworkManagerUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		80E68DEC276C94FD0094A8D1 /* PullRequestSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				80E68E06276C96330094A8D1 /* Network */,
 				80E68DED276C94FD0094A8D1 /* AppDelegate.swift */,
 				80E68DEF276C94FD0094A8D1 /* SceneDelegate.swift */,
 				80E68DF1276C94FD0094A8D1 /* ViewController.swift */,
@@ -65,6 +70,15 @@
 				80E68DFB276C94FF0094A8D1 /* Info.plist */,
 			);
 			path = PullRequestSampleApp;
+			sourceTree = "<group>";
+		};
+		80E68E06276C96330094A8D1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				80E68E07276C96430094A8D1 /* NetworkManager.swift */,
+				80E68E09276C96510094A8D1 /* NetworkManagerUtil.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80E68E08276C96430094A8D1 /* NetworkManager.swift in Sources */,
+				80E68E0A276C96510094A8D1 /* NetworkManagerUtil.swift in Sources */,
 				80E68DF2276C94FD0094A8D1 /* ViewController.swift in Sources */,
 				80E68DEE276C94FD0094A8D1 /* AppDelegate.swift in Sources */,
 				80E68DF0276C94FD0094A8D1 /* SceneDelegate.swift in Sources */,
