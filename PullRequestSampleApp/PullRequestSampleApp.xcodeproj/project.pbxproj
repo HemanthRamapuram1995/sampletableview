@@ -19,6 +19,7 @@
 		80E68E11276C99C40094A8D1 /* PullRequestListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E68E10276C99C40094A8D1 /* PullRequestListVM.swift */; };
 		80E68E17276C9E1C0094A8D1 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E68E16276C9E1C0094A8D1 /* Utility.swift */; };
 		80E68E19276CA4230094A8D1 /* PRItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E68E18276CA4230094A8D1 /* PRItemCell.swift */; };
+		80E68E1D276CE9270094A8D1 /* PullRequestDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E68E1C276CE9270094A8D1 /* PullRequestDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		80E68E10276C99C40094A8D1 /* PullRequestListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListVM.swift; sourceTree = "<group>"; };
 		80E68E16276C9E1C0094A8D1 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		80E68E18276CA4230094A8D1 /* PRItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRItemCell.swift; sourceTree = "<group>"; };
+		80E68E1C276CE9270094A8D1 /* PullRequestDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				80E68E0E276C995E0094A8D1 /* PullRequestsListViewController.swift */,
 				80E68E10276C99C40094A8D1 /* PullRequestListVM.swift */,
 				80E68E18276CA4230094A8D1 /* PRItemCell.swift */,
+				80E68E1C276CE9270094A8D1 /* PullRequestDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			files = (
 				80E68E08276C96430094A8D1 /* NetworkManager.swift in Sources */,
 				80E68E0F276C995E0094A8D1 /* PullRequestsListViewController.swift in Sources */,
+				80E68E1D276CE9270094A8D1 /* PullRequestDetailViewController.swift in Sources */,
 				80E68E11276C99C40094A8D1 /* PullRequestListVM.swift in Sources */,
 				80E68E0A276C96510094A8D1 /* NetworkManagerUtil.swift in Sources */,
 				80E68E19276CA4230094A8D1 /* PRItemCell.swift in Sources */,
@@ -339,6 +343,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PullRequestSampleApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "PR Expoler";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -353,7 +358,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -366,6 +371,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PullRequestSampleApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "PR Expoler";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -380,7 +386,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
