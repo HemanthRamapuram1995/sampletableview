@@ -13,8 +13,8 @@ class PullRequestsListViewController: UITableViewController {
     
     
     private func setupVm(){
-        viewmodel.owner = "HemanthRamapuram1995"
-        viewmodel.repository = "sampletableview"
+        viewmodel.owner = gitUserName
+        viewmodel.repository = gitRepoName
         viewmodel.delegate = self
     }
     
