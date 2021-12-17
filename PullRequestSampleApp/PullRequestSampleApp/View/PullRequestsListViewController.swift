@@ -58,6 +58,13 @@ class PullRequestsListViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let currentItem = arrListPR[indexPath.row]
+        let detailVC = StoryBoardName.Main.getViewController(type: PullRequestDetailViewController.self)
+        detailVC.data = currentItem
+        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

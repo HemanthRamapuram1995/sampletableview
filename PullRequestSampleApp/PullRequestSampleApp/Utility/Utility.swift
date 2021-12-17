@@ -6,6 +6,18 @@
 //
 
 import Foundation
+import UIKit
+
+enum StoryBoardName : String {
+    case Main
+    func getViewController<T : UIViewController>(type : T.Type) -> T{
+        guard let vc = UIStoryboard(name: self.rawValue, bundle: nil).instantiateViewController(withIdentifier: String(describing: type)) as? T else{
+            fatalError("register view contoller with storyboard ID same as ViewController Name")
+        }
+        return vc
+    }
+
+}
 
 func getData<T : Decodable>(from data : Data? , type : T.Type) throws -> T?{
     guard let data = data else {
@@ -17,3 +29,4 @@ func getData<T : Decodable>(from data : Data? , type : T.Type) throws -> T?{
         throw e
     }
 }
+
