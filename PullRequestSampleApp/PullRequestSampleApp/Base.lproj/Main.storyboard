@@ -67,6 +67,10 @@
                                         <constraint firstItem="YcM-ji-pOX" firstAttribute="top" secondItem="B1B-yZ-VQ9" secondAttribute="top" constant="16" id="z8Y-Jc-6gF"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lblClosedDate" destination="jLz-ks-2gl" id="qAq-DQ-vam"/>
+                                    <outlet property="lblTitle" destination="Wcp-Zc-TY6" id="9Mf-wj-drT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

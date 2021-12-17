@@ -9,8 +9,12 @@ import UIKit
 
 class PRItemCell: UITableViewCell {
 
+    @IBOutlet var lblTitle : UILabel!
+    @IBOutlet var lblClosedDate : UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.selectionStyle = .none
+        self.accessoryType = .disclosureIndicator
         // Initialization code
     }
 
@@ -18,6 +22,12 @@ class PRItemCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setData(data : PullsList.ResponseModel){
+        print("\(data.strTitle!) \n \(data.closedDate!)")
+        lblTitle.text = data.strTitle
+        lblClosedDate.text =  data.closedDate
     }
 
 }
