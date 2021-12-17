@@ -11,7 +11,7 @@ class NetworkManager {
     func makeCall(_ taret : APICall ,
                   queryParms : QueryParms? = nil ,
                   body : Encodable? = nil,
-                  callback : @escaping(((data  :  Any? , statusCode : Int ,  error : Error?)) -> Void)){
+                  callback : @escaping(((data  :  Data? , statusCode : Int ,  error : Error?)) -> Void)){
         
         guard var componnets = taret.objUrl else{
             return
